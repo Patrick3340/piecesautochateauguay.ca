@@ -1,0 +1,6 @@
+# macOS
+.DS_Store
+._*
+
+# Source originals — the web-ready copies live in assets/
+Media/
