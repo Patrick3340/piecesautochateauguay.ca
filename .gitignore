@@ -4,3 +4,6 @@
 
 # Source originals — the web-ready copies live in assets/
 Media/
+
+# Local dev tooling
+.claude/
