@@ -480,7 +480,8 @@ a{color:inherit}
 /* ============================================================ BRANDS */
 .brands{
   display:grid; gap:var(--s-3);
-  grid-template-columns:repeat(auto-fill,minmax(158px,1fr));
+  /* 185px so the longest name ("Bumper to Bumper") stays on one line */
+  grid-template-columns:repeat(auto-fill,minmax(185px,1fr));
 }
 .brand-chip{
   background:var(--paper); border:1px solid var(--border); border-radius:var(--r-md);
@@ -759,6 +760,7 @@ a{color:inherit}
     <div class="brands reveal">
       <div class="brand-chip">Uni-Select</div>
       <div class="brand-chip">Auto Parts Plus</div>
+      <div class="brand-chip">Bumper to Bumper</div>
       <div class="brand-chip">Mirka</div>
       <div class="brand-chip">PROLITE</div>
       <div class="brand-chip">Monroe</div>
@@ -766,8 +768,7 @@ a{color:inherit}
       <div class="brand-chip">Gates</div>
       <div class="brand-chip">NGK</div>
       <div class="brand-chip">Bosch</div>
-      <div class="brand-chip">Wagner</div>
-      <div class="brand-chip">Fram</div>
+      <div class="brand-chip">WIX</div>
       <div class="brand-chip">Castrol</div>
     </div>
     <p class="brands-note reveal" data-i18n="brandsNote">Liste partielle — parlez-nous de votre projet et nous vous dirons ce que nous tenons en stock.</p>
