@@ -478,10 +478,15 @@ a{color:inherit}
 .branch-actions .btn{flex:1}
 
 /* ============================================================ BRANDS */
+/* 12 brands laid out strictly 4 across × 3 down on any computer, including a
+   narrowed browser window. Phones drop to 2 across — 4 columns at 375px would
+   break every multi-word name across three lines. */
 .brands{
   display:grid; gap:var(--s-3);
-  /* 185px so the longest name ("Bumper to Bumper") stays on one line */
-  grid-template-columns:repeat(auto-fill,minmax(185px,1fr));
+  grid-template-columns:repeat(2,1fr);
+}
+@media (min-width:768px){
+  .brands{grid-template-columns:repeat(4,1fr)}
 }
 .brand-chip{
   background:var(--paper); border:1px solid var(--border); border-radius:var(--r-md);
@@ -491,6 +496,14 @@ a{color:inherit}
   transition:border-color .2s var(--ease), color .2s var(--ease), transform .2s var(--ease);
 }
 .brand-chip:hover{border-color:var(--red); color:var(--red); transform:translateY(-2px)}
+
+/* between 768px and 1060px the four columns get tight — trim the type and the
+   side padding just enough that "Bumper to Bumper" still holds one line.
+   Must come after the base .brand-chip rule to win at equal specificity. */
+@media (min-width:768px) and (max-width:1060px){
+  .brand-chip{font-size:13px; padding:var(--s-5) 8px; letter-spacing:0}
+}
+
 .brands-note{margin-top:var(--s-5); color:var(--text-muted); font-size:15px}
 
 /* ============================================================ ABOUT */
