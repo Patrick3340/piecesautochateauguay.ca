@@ -618,9 +618,10 @@ a{color:inherit}
           <button type="button" data-lang="fr" aria-pressed="true">FR</button>
           <button type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
-        <a class="btn btn-red btn-sm header-call" href="tel:+14506917255">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span data-i18n="callUs">Nous appeler</span>
+        <a class="btn btn-red btn-sm header-call" id="header-newsletter"
+           href="mailto:info@bressani.co?subject=Inscription%20%C3%A0%20l%27infolettre">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+          <span data-i18n="navNewsletter">Infolettre</span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -635,6 +636,8 @@ a{color:inherit}
       <a href="#marques" data-i18n="navBrands">Marques</a>
       <a href="#apropos" data-i18n="navAbout">À propos</a>
       <a href="tel:+14506917255" data-i18n="callUs">Nous appeler</a>
+      <a href="mailto:info@bressani.co?subject=Inscription%20%C3%A0%20l%27infolettre"
+         data-i18n="navNewsletter">Infolettre</a>
     </nav>
   </div>
 </header>
@@ -1006,6 +1009,7 @@ const T = {
     brandSub:"3 succursales",
     navServices:"Services", navDocs:"Catalogues", navBranches:"Succursales", navBrands:"Marques", navAbout:"À propos",
     callUs:"Nous appeler",
+    navNewsletter:"Infolettre",
 
     heroTitle1:"Votre partenaire", heroTitle2:"en pièces de qualité.",
     heroLede:"Pièces, outils et service pour les garages et les particuliers de la Montérégie. Trois succursales, un même inventaire, des conseillers qui connaissent votre véhicule.",
@@ -1095,6 +1099,7 @@ const T = {
     brandSub:"3 locations",
     navServices:"Services", navDocs:"Catalogues", navBranches:"Locations", navBrands:"Brands", navAbout:"About",
     callUs:"Call us",
+    navNewsletter:"Newsletter",
 
     heroTitle1:"Your partner", heroTitle2:"in quality parts.",
     heroLede:"Parts, tools and service for repair shops and drivers across the Montérégie. Three locations, one inventory, and counter staff who know your vehicle.",
