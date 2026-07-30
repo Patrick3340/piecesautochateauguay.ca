@@ -576,6 +576,9 @@ a{color:inherit}
   justify-content:space-between; align-items:center;
   color:#7A7A87; font-size:13.5px;
 }
+/* right-hand group: rights notice + site credit, on one line when there's room */
+.footer-meta{display:flex; flex-wrap:wrap; align-items:center; gap:var(--s-2)}
+.footer-sep{color:#4A4A55}
 
 /* ============================================================ MOTION */
 .reveal{opacity:0; transform:translateY(22px); transition:opacity .65s var(--ease), transform .65s var(--ease)}
@@ -870,7 +873,11 @@ a{color:inherit}
 
     <div class="footer-bottom">
       <span>© <span id="year">2026</span> Pièces d'autos Châteauguay inc.</span>
-      <span data-i18n="footerRights">Tous droits réservés.</span>
+      <span class="footer-meta">
+        <span data-i18n="footerRights">Tous droits réservés.</span>
+        <span class="footer-sep" aria-hidden="true">·</span>
+        <span data-i18n="footerCredit">Site web par Bressani Web</span>
+      </span>
     </div>
   </div>
 </footer>
@@ -1060,7 +1067,7 @@ const T = {
           d:"Batteries 12 V conçues pour les conditions canadiennes et les véhicules modernes."},
       mirka:{t:"Catalogue Mirka",
           d:"Abrasifs, ponceuses et solutions de finition pour la carrosserie et l'atelier."},
-      walter:{t:"Promotions Walter",
+      walter:{t:"Walter",
           d:"Au-delà du grain : disques à feuillets, disques à sabler et nettoyants en céramique."}
     },
     docPages:"pages", docLangFr:"Français", docLangEn:"Anglais",
@@ -1092,6 +1099,7 @@ const T = {
 
     footerBlurb:"Pièces, outils et service pour les garages et les particuliers de la Montérégie. Membre de la bannière Uni-Select / Auto Parts Plus.",
     footerRights:"Tous droits réservés.",
+    footerCredit:"Site web par Bressani Web",
 
     /* branch card labels */
     lblHours:"Heures d'ouverture",
@@ -1156,7 +1164,7 @@ const T = {
           d:"12V batteries built for Canadian conditions and modern vehicles."},
       mirka:{t:"Mirka catalogue",
           d:"Abrasives, sanders and finishing solutions for body shop and garage."},
-      walter:{t:"Walter promotions",
+      walter:{t:"Walter",
           d:"Beyond the Grain: flap discs, sanding discs and ceramic cleaners."}
     },
     docPages:"pages", docLangFr:"French", docLangEn:"English",
@@ -1188,6 +1196,7 @@ const T = {
 
     footerBlurb:"Parts, tools and service for repair shops and drivers across the Montérégie. Part of the Uni-Select / Auto Parts Plus banner.",
     footerRights:"All rights reserved.",
+    footerCredit:"Website by Bressani Web",
 
     lblHours:"Opening hours",
     lblCall:"Call",
