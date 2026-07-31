@@ -735,6 +735,12 @@ a{color:inherit}
       <a class="btn btn-ghost-dark" href="#services">
         <span data-i18n="heroCta2">Nos services</span>
       </a>
+      <a class="btn btn-ghost-dark" href="assets/promos-du-mois-fr.pdf"
+         target="_blank" rel="noopener" data-i18n-aria="heroCta3Aria"
+         aria-label="Promos du mois — ouvrir le PDF dans un nouvel onglet">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M12 18v-6"/><path d="M9 15l3 3 3-3"/></svg>
+        <span data-i18n="heroCta3">Promos du mois</span>
+      </a>
     </div>
 
     <div class="hero-stats">
@@ -1165,6 +1171,8 @@ const T = {
     heroTitle1:"Votre partenaire", heroTitle2:"en pièces de qualité.",
     heroLede:"Pièces, outils et service pour les garages et les particuliers de la Montérégie. Trois succursales, un même inventaire, des conseillers qui connaissent votre véhicule.",
     heroCta1:"Voir nos succursales", heroCta2:"Nos services",
+    heroCta3:"Promos du mois",
+    heroCta3Aria:"Promos du mois — ouvrir le PDF dans un nouvel onglet",
     stat1:"Succursales en Montérégie",
     stat2Num:"6 jours", stat2:"Ouvert du lundi au samedi",
     stat3Num:"Pros + DIY", stat3:"Garages, flottes et particuliers",
@@ -1281,6 +1289,8 @@ const T = {
     heroTitle1:"Your partner", heroTitle2:"in quality parts.",
     heroLede:"Parts, tools and service for repair shops and drivers across the Montérégie. Three locations, one inventory, and counter staff who know your vehicle.",
     heroCta1:"See our locations", heroCta2:"Our services",
+    heroCta3:"Monthly promos",
+    heroCta3Aria:"Monthly promos — open the PDF in a new tab",
     stat1:"Locations in the Montérégie",
     stat2Num:"6 days", stat2:"Open Monday to Saturday",
     stat3Num:"Pro + DIY", stat3:"Shops, fleets and drivers",
@@ -1507,6 +1517,12 @@ function applyLang(next){
     if (value === undefined) return;
     if (/<[a-z][\s\S]*>/i.test(value)) el.innerHTML = value;
     else el.textContent = value;
+  });
+
+  /* elements whose accessible name is translated rather than their text */
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+    const value = t[el.dataset.i18nAria];
+    if (value !== undefined) el.setAttribute('aria-label', value);
   });
 
   document.querySelectorAll('.lang button').forEach(btn => {
