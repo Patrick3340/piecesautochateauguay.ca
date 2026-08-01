@@ -566,10 +566,6 @@ a.brand-chip:hover{border-color:var(--red); color:var(--red); transform:translat
 .btn-white{background:#fff; color:var(--red)}
 .btn-white:hover{background:#F4F4F5; transform:translateY(-1px)}
 
-/* secondary action on the red band — keeps one clear primary (the phone) */
-.btn-outline-white{background:transparent; color:#fff; border-color:rgba(255,255,255,.55)}
-.btn-outline-white:hover{background:rgba(255,255,255,.12); border-color:#fff; transform:translateY(-1px)}
-
 .cta-actions{display:flex; flex-wrap:wrap; gap:var(--s-3); align-items:center}
 
 /* ============================================================ FOOTER */
@@ -869,11 +865,11 @@ a.brand-chip:hover{border-color:var(--red); color:var(--red); transform:translat
 <section class="cta-band on-dark">
   <div class="container cta-inner">
     <div>
-      <h2 data-i18n="ctaTitle">Vous cherchez une pièce ? Un appel suffit.</h2>
+      <h2 data-i18n="ctaTitle">Vous cherchez une pièce ? Contactez-nous.</h2>
       <p data-i18n="ctaBody">Nos conseillers vérifient la disponibilité et réservent votre pièce au comptoir.</p>
     </div>
     <div class="cta-actions">
-      <a class="btn btn-outline-white" href="mailto:info@piecesautochateauguay.ca">
+      <a class="btn btn-white" href="mailto:info@piecesautochateauguay.ca">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
         <span>info@piecesautochateauguay.ca</span>
       </a>
@@ -1151,7 +1147,7 @@ const T = {
     aboutPoint4:"Trois points de service en Montérégie",
 
 
-    ctaTitle:"Vous cherchez une pièce ? Un appel suffit.",
+    ctaTitle:"Vous cherchez une pièce ? Contactez-nous.",
     ctaBody:"Nos conseillers vérifient la disponibilité et réservent votre pièce au comptoir.",
 
     footerBlurb:"Pièces, outils et service pour les garages et les particuliers de la Montérégie. Membre de la bannière Uni-Select / Auto Parts Plus.",
@@ -1253,8 +1249,8 @@ const T = {
     aboutPoint4:"Three service points in the Montérégie",
 
 
-    ctaTitle:"Looking for a part? One call is all it takes.",
-    ctaBody:"Our counter staff will check availability and hold your part at the counter.",
+    ctaTitle:"Looking for a part? Contact us.",
+    ctaBody:"Our staff will check availability and hold your part at the counter.",
 
     footerBlurb:"Parts, tools and service for repair shops and drivers across the Montérégie. Part of the Uni-Select / Auto Parts Plus banner.",
     footerCookies:"Cookie policy",
