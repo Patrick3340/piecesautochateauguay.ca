@@ -8,16 +8,9 @@
 <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/a3b6e292df0e36de86d83f838794ae56/script.js"></script>
 <!-- End cookieyes banner -->
 
-<!-- Google Analytics (GA4) — consent-gated by CookieYes.
-     ⚠️ REPLACE G-XXXXXXXXXX below with your GA4 Measurement ID (both places). -->
-<script type="text/plain" data-cookieyes="cookieyes-analytics" async
-        src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script type="text/plain" data-cookieyes="cookieyes-analytics">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
+<!-- Vercel Web Analytics — cookieless, so it needs no consent gate.
+     Must also be enabled in the Vercel dashboard: Project → Analytics. -->
+<script defer src="/_vercel/insights/script.js"></script>
 
 <title>Conditions — Pièces Auto Châteauguay</title>
 <meta name="description" content="Conditions d'utilisation, de vente et de retour de Pièces d'autos Châteauguay inc. — prix, disponibilité, garanties et retours.">

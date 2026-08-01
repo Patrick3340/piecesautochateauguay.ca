@@ -8,18 +8,9 @@
 <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/a3b6e292df0e36de86d83f838794ae56/script.js"></script>
 <!-- End cookieyes banner -->
 
-<!-- Google Analytics (GA4) — consent-gated by CookieYes.
-     type="text/plain" + data-cookieyes tells CookieYes to hold these scripts
-     until the visitor accepts analytics cookies. Law 25 requires that.
-     ⚠️ REPLACE G-XXXXXXXXXX below with your GA4 Measurement ID (both places). -->
-<script type="text/plain" data-cookieyes="cookieyes-analytics" async
-        src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script type="text/plain" data-cookieyes="cookieyes-analytics">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
+<!-- Vercel Web Analytics — cookieless, so it needs no consent gate.
+     Must also be enabled in the Vercel dashboard: Project → Analytics. -->
+<script defer src="/_vercel/insights/script.js"></script>
 
 
 <title>Politique de confidentialité — Pièces Auto Châteauguay</title>
@@ -184,10 +175,9 @@ th{font-weight:700; background:var(--surface)}
     témoins. Cet outil dépose un témoin qui enregistre vos préférences afin de ne pas vous
     redemander votre choix à chaque visite. Vous pouvez modifier vos préférences en tout temps
     au moyen de la bannière de témoins.</p>
-    <p>Nous utilisons également <strong>Google Analytics</strong> pour mesurer la fréquentation
-    du site. Ces témoins ne sont déposés qu'après votre consentement et ne servent jamais à la
-    publicité. Le détail de chaque témoin figure dans notre
-    <a href="politique-de-temoins.html">politique relative aux témoins</a>.</p>
+    <p>Pour mesurer la fréquentation du site, nous utilisons <strong>Vercel Web Analytics</strong>,
+    qui ne dépose <strong>aucun témoin</strong> et ne permet pas de vous identifier. Le détail
+    figure dans notre <a href="politique-de-temoins.html">politique relative aux témoins</a>.</p>
 
     <h2>3. Utilisation des renseignements</h2>
     <p>Nous utilisons vos renseignements uniquement pour :</p>
@@ -208,7 +198,7 @@ th{font-weight:700; background:var(--surface)}
           <tr><td>FormSubmit</td><td>Transmission du formulaire d'infolettre</td><td>Les champs que vous remplissez</td></tr>
           <tr><td>Vercel</td><td>Hébergement du site</td><td>Adresse IP, journaux techniques</td></tr>
           <tr><td>CookieYes</td><td>Gestion du consentement aux témoins</td><td>Vos préférences de témoins</td></tr>
-          <tr><td>Google Analytics</td><td>Mesure d'audience du site, après votre consentement</td><td>Adresse IP, pages consultées</td></tr>
+          <tr><td>Vercel Web Analytics</td><td>Mesure d'audience sans témoin</td><td>Données de navigation agrégées, non identifiantes</td></tr>
           <tr><td>Google Fonts</td><td>Affichage des polices de caractères</td><td>Adresse IP transmise à Google</td></tr>
         </tbody>
       </table>
@@ -302,8 +292,8 @@ th{font-weight:700; background:var(--surface)}
     <p>We use <strong>CookieYes</strong> to manage your cookie consent. It sets a cookie
     recording your preferences so you are not asked again on every visit. You can change your
     preferences at any time through the cookie banner.</p>
-    <p>We also use <strong>Google Analytics</strong> to measure site traffic. These cookies are
-    only set after you consent and are never used for advertising. Each cookie is listed in our
+    <p>To measure site traffic we use <strong>Vercel Web Analytics</strong>, which sets
+    <strong>no cookies</strong> and cannot identify you. Details are in our
     <a href="politique-de-temoins.html">cookie policy</a>.</p>
 
     <h2>3. How we use your information</h2>
@@ -324,7 +314,7 @@ th{font-weight:700; background:var(--surface)}
           <tr><td>FormSubmit</td><td>Delivers the newsletter form</td><td>The fields you complete</td></tr>
           <tr><td>Vercel</td><td>Website hosting</td><td>IP address, technical logs</td></tr>
           <tr><td>CookieYes</td><td>Cookie consent management</td><td>Your cookie preferences</td></tr>
-          <tr><td>Google Analytics</td><td>Website traffic measurement, after your consent</td><td>IP address, pages viewed</td></tr>
+          <tr><td>Vercel Web Analytics</td><td>Cookieless traffic measurement</td><td>Aggregated, non-identifying browsing data</td></tr>
           <tr><td>Google Fonts</td><td>Serves the site's typefaces</td><td>IP address sent to Google</td></tr>
         </tbody>
       </table>

@@ -8,16 +8,9 @@
 <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/a3b6e292df0e36de86d83f838794ae56/script.js"></script>
 <!-- End cookieyes banner -->
 
-<!-- Google Analytics (GA4) — consent-gated by CookieYes.
-     ⚠️ REPLACE G-XXXXXXXXXX below with your GA4 Measurement ID (both places). -->
-<script type="text/plain" data-cookieyes="cookieyes-analytics" async
-        src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script type="text/plain" data-cookieyes="cookieyes-analytics">
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
+<!-- Vercel Web Analytics — cookieless, so it needs no consent gate.
+     Must also be enabled in the Vercel dashboard: Project → Analytics. -->
+<script defer src="/_vercel/insights/script.js"></script>
 
 <title>Politique de témoins — Pièces Auto Châteauguay</title>
 <meta name="description" content="Politique relative aux témoins (cookies) de Pièces d'autos Châteauguay inc. — types de témoins utilisés, finalités et gestion de vos préférences.">
@@ -158,13 +151,11 @@ td code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13.5p
     <p>Nous utilisons les témoins de façon limitée, uniquement pour :</p>
     <ul>
       <li><strong>faire fonctionner le site</strong> et mémoriser vos préférences de consentement;</li>
-      <li><strong>mesurer la fréquentation</strong> du site de façon agrégée, afin de comprendre
-          quelles pages sont consultées et d'améliorer le contenu.</li>
     </ul>
+    <p>La mesure de fréquentation, elle, se fait <strong>sans témoin</strong> (voir plus bas).</p>
     <p>Nous n'utilisons <strong>aucun témoin publicitaire</strong>, aucun témoin de ciblage et
     aucun témoin de réseaux sociaux. Nous ne revendons aucune donnée.</p>
-    <p>Les témoins de mesure d'audience ne sont déposés <strong>qu'après votre consentement</strong>.
-    Si vous refusez, ils ne sont jamais activés.</p>
+    <p>Le seul témoin réellement déposé est celui qui enregistre vos préférences de consentement.</p>
 
     <h2>Les témoins que nous utilisons</h2>
 
@@ -185,26 +176,10 @@ td code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13.5p
     </div>
 
     <span class="cat cat-ana">Mesure d'audience</span>
-    <p>Déposés uniquement si vous acceptez la catégorie « Analytique » dans la bannière.</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Nom</th><th>Fournisseur</th><th>Finalité</th><th>Durée</th></tr></thead>
-        <tbody>
-          <tr>
-            <td><code>_ga</code></td>
-            <td>Google Analytics</td>
-            <td>Distingue les visiteurs de façon anonyme pour établir des statistiques de fréquentation.</td>
-            <td>2 ans</td>
-          </tr>
-          <tr>
-            <td><code>_ga_&lt;ID&gt;</code></td>
-            <td>Google Analytics</td>
-            <td>Maintient l'état de la session de mesure.</td>
-            <td>2 ans</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <p><strong>Aucun témoin.</strong> Nous mesurons la fréquentation du site avec
+    <strong>Vercel Web Analytics</strong>, un outil qui ne dépose aucun témoin, n'utilise pas
+    d'empreinte numérique et ne suit pas les visiteurs d'un site à l'autre. Les statistiques
+    produites sont agrégées et ne permettent pas de vous identifier.</p>
 
     <h2>Autres technologies</h2>
     <h3>Stockage local (préférence de langue)</h3>
@@ -219,8 +194,8 @@ td code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13.5p
 
     <h3>Polices de caractères et hébergement</h3>
     <p>Les polices proviennent de <strong>Google Fonts</strong> et le site est hébergé par
-    <strong>Vercel</strong>. Ces services ne déposent pas de témoins, mais reçoivent votre
-    adresse IP du fait de la connexion, comme l'explique notre
+    <strong>Vercel</strong>, qui fournit aussi la mesure d'audience. Ces services ne déposent pas
+    de témoins, mais reçoivent votre adresse IP du fait de la connexion, comme l'explique notre
     <a href="confidentialite.html">politique de confidentialité</a>.</p>
 
     <h2>Gérer mes préférences</h2>
@@ -271,13 +246,11 @@ td code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13.5p
     <p>We use cookies sparingly, only to:</p>
     <ul>
       <li><strong>operate the site</strong> and remember your consent preferences;</li>
-      <li><strong>measure traffic</strong> in aggregate, so we can see which pages are visited
-          and improve the content.</li>
     </ul>
+    <p>Traffic measurement itself is done <strong>without cookies</strong> (see below).</p>
     <p>We use <strong>no advertising cookies</strong>, no targeting cookies and no social media
     cookies. We do not sell any data.</p>
-    <p>Analytics cookies are only set <strong>after you consent</strong>. If you decline, they
-    are never activated.</p>
+    <p>The only cookie actually set is the one recording your consent preferences.</p>
 
     <h2>The cookies we use</h2>
 
@@ -298,26 +271,10 @@ td code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13.5p
     </div>
 
     <span class="cat cat-ana">Analytics</span>
-    <p>Set only if you accept the "Analytics" category in the banner.</p>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Name</th><th>Provider</th><th>Purpose</th><th>Duration</th></tr></thead>
-        <tbody>
-          <tr>
-            <td><code>_ga</code></td>
-            <td>Google Analytics</td>
-            <td>Distinguishes visitors anonymously to produce traffic statistics.</td>
-            <td>2 years</td>
-          </tr>
-          <tr>
-            <td><code>_ga_&lt;ID&gt;</code></td>
-            <td>Google Analytics</td>
-            <td>Maintains the measurement session state.</td>
-            <td>2 years</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <p><strong>No cookies.</strong> We measure site traffic with
+    <strong>Vercel Web Analytics</strong>, which sets no cookies, uses no fingerprinting and does
+    not track visitors across sites. The statistics produced are aggregated and cannot identify
+    you.</p>
 
     <h2>Other technologies</h2>
     <h3>Local storage (language preference)</h3>
@@ -332,8 +289,8 @@ td code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13.5p
 
     <h3>Fonts and hosting</h3>
     <p>Typefaces are served by <strong>Google Fonts</strong> and the site is hosted by
-    <strong>Vercel</strong>. These services set no cookies, but do receive your IP address as a
-    result of the connection, as explained in our
+    <strong>Vercel</strong>, which also provides our traffic measurement. These services set no
+    cookies, but do receive your IP address as a result of the connection, as explained in our
     <a href="confidentialite.html">privacy policy</a>.</p>
 
     <h2>Managing your preferences</h2>
