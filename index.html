@@ -3,6 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Start cookieyes banner — must load before any script it may need to gate -->
+<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/a3b6e292df0e36de86d83f838794ae56/script.js"></script>
+<!-- End cookieyes banner -->
+
 <title>Pièces Auto Châteauguay — Pièces, outils et service depuis trois succursales</title>
 <meta name="description" content="Pièces d'autos Châteauguay — pièces, outils et service pour garages et particuliers. Trois succursales : Châteauguay, Sainte-Martine et Saint-Rémi. Bannière Uni-Select.">
 <meta name="theme-color" content="#0B0B0C">
@@ -648,6 +653,9 @@ a.brand-chip:hover{border-color:var(--red); color:var(--red); transform:translat
 }
 .footer-col a:hover{color:#FF6B78}
 
+.footer-privacy{color:#fff; text-decoration:underline; text-underline-offset:3px;
+  display:inline-flex; align-items:center; min-height:36px}
+.footer-privacy:hover{color:#FF6B78}
 .footer-bottom{
   padding-top:var(--s-5); display:flex; flex-wrap:wrap; gap:var(--s-4);
   justify-content:space-between; align-items:center;
@@ -1047,6 +1055,8 @@ a.brand-chip:hover{border-color:var(--red); color:var(--red); transform:translat
     <div class="footer-bottom">
       <span>© <span id="year">2026</span> Pièces d'autos Châteauguay inc.</span>
       <span class="footer-meta">
+        <a class="footer-privacy" href="confidentialite.html" data-i18n="footerPrivacy">Politique de confidentialité</a>
+        <span class="footer-sep" aria-hidden="true">·</span>
         <span data-i18n="footerRights">Tous droits réservés.</span>
         <span class="footer-sep" aria-hidden="true">·</span>
         <span data-i18n="footerCredit">Site par Bressani &amp; Co Web</span>
@@ -1293,6 +1303,7 @@ const T = {
 
     footerBlurb:"Pièces, outils et service pour les garages et les particuliers de la Montérégie. Membre de la bannière Uni-Select / Auto Parts Plus.",
     footerRights:"Tous droits réservés.",
+    footerPrivacy:"Politique de confidentialité",
     footerCredit:"Site par Bressani & Co Web",
 
     /* branch card labels */
@@ -1411,6 +1422,7 @@ const T = {
 
     footerBlurb:"Parts, tools and service for repair shops and drivers across the Montérégie. Part of the Uni-Select / Auto Parts Plus banner.",
     footerRights:"All rights reserved.",
+    footerPrivacy:"Privacy policy",
     footerCredit:"Site by Bressani & Co Web",
 
     lblHours:"Opening hours",
