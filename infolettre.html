@@ -8,6 +8,20 @@
 <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/a3b6e292df0e36de86d83f838794ae56/script.js"></script>
 <!-- End cookieyes banner -->
 
+<!-- Google Analytics (GA4) — consent-gated by CookieYes.
+     type="text/plain" + data-cookieyes tells CookieYes to hold these scripts
+     until the visitor accepts analytics cookies. Law 25 requires that.
+     ⚠️ REPLACE G-XXXXXXXXXX below with your GA4 Measurement ID (both places). -->
+<script type="text/plain" data-cookieyes="cookieyes-analytics" async
+        src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script type="text/plain" data-cookieyes="cookieyes-analytics">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+
 <title>Infolettre — Pièces Auto Châteauguay</title>
 <meta name="description" content="Inscrivez-vous à l'infolettre de Pièces d'autos Châteauguay : promotions fournisseurs, nouveaux catalogues et nouveautés en magasin.">
 <meta name="theme-color" content="#0B0B0C">
@@ -398,7 +412,9 @@ nlForm.addEventListener('submit', async e => {
     Courriel:   document.getElementById('nl-email').value.trim(),
     _subject:   'Nouvelle inscription à l\'infolettre — Pièces Auto Châteauguay',
     _template:  'table',
-    _captcha:   'false'
+    /* FormSubmit's own captcha, verified on their server — unlike a reCAPTCHA
+       widget on a static site, this one actually blocks automated spam. */
+    _captcha:   'true'
   };
 
   try {
