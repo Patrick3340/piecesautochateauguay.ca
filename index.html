@@ -550,68 +550,6 @@ a.brand-chip:hover{border-color:var(--red); color:var(--red); transform:translat
 .about-points li{display:flex; gap:12px; align-items:flex-start; font-size:15.5px; color:#E4E4EA}
 .about-points svg{width:20px; height:20px; color:#FF6B78; flex-shrink:0; margin-top:2px}
 
-/* ============================================================ NEWSLETTER */
-.nl{
-  display:grid; gap:var(--s-8); grid-template-columns:1fr; align-items:start;
-}
-@media (min-width:900px){ .nl{grid-template-columns:1fr 1.1fr; gap:var(--s-9)} }
-
-.nl-form{
-  background:var(--paper); border:1px solid var(--border);
-  border-radius:var(--r-lg); padding:var(--s-7);
-  box-shadow:var(--shadow-md);
-}
-@media (max-width:520px){ .nl-form{padding:var(--s-5)} }
-
-.field{margin-bottom:var(--s-5)}
-.field label{
-  display:block; font-size:14.5px; font-weight:650;
-  color:var(--text); margin-bottom:8px;
-}
-.field .req{color:var(--red); margin-left:3px}
-
-.field input{
-  width:100%; min-height:52px; padding:14px 16px;
-  font-family:inherit; font-size:16px;   /* 16px avoids iOS zoom-on-focus */
-  color:var(--text); background:var(--paper);
-  border:1px solid var(--border); border-radius:var(--r-sm);
-  transition:border-color .18s var(--ease), box-shadow .18s var(--ease);
-}
-.field input::placeholder{color:#9A9AA5}
-.field input:hover{border-color:#C8C8D0}
-.field input:focus{
-  outline:none; border-color:var(--red);
-  box-shadow:0 0 0 3px rgba(200,32,47,.16);
-}
-.field input[aria-invalid="true"]{border-color:var(--red); background:var(--red-tint)}
-
-.field-error{
-  display:none; margin-top:7px; font-size:13.5px; font-weight:600; color:var(--red);
-  align-items:center; gap:6px;
-}
-.field-error.show{display:flex}
-.field-error svg{width:15px; height:15px; flex-shrink:0}
-
-/* keeps bots out without bothering anyone: real people never fill this */
-.nl-trap{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden}
-
-.nl-note{margin-top:var(--s-4); font-size:13.5px; color:var(--text-muted); line-height:1.55}
-
-.nl-status{
-  display:none; margin-top:var(--s-5); padding:var(--s-5);
-  border-radius:var(--r-md); font-size:15px; line-height:1.55;
-}
-.nl-status.show{display:block}
-.nl-status.ok{background:#E8F6EE; border:1px solid #A9DcBD; color:#0B5F31}
-.nl-status.err{background:var(--red-tint); border:1px solid #F3B9BF; color:#8E1520}
-.nl-status a{color:inherit; font-weight:700}
-
-.nl-points{list-style:none; margin:var(--s-6) 0 0; padding:0; display:grid; gap:var(--s-4)}
-.nl-points li{display:flex; gap:13px; align-items:flex-start}
-.nl-points svg{width:21px; height:21px; color:var(--red); flex-shrink:0; margin-top:2px}
-.nl-points strong{display:block; font-weight:650; color:var(--text); margin-bottom:2px}
-.nl-points span{color:var(--text-muted); font-size:15px; line-height:1.55}
-
 /* ============================================================ CTA BAND */
 .cta-band{background:var(--red); color:#fff; padding:var(--s-8) 0}
 .cta-inner{
@@ -707,7 +645,7 @@ a.brand-chip:hover{border-color:var(--red); color:var(--red); transform:translat
           <button type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
         <a class="btn btn-red btn-sm header-call" id="header-newsletter"
-           href="#infolettre">
+           href="infolettre.html">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
           <span data-i18n="navNewsletter">Infolettre</span>
         </a>
@@ -724,7 +662,7 @@ a.brand-chip:hover{border-color:var(--red); color:var(--red); transform:translat
       <a href="#marques" data-i18n="navBrands">Marques</a>
       <a href="#apropos" data-i18n="navAbout">À propos</a>
       <a href="tel:+14506917255" data-i18n="callUs">Nous appeler</a>
-      <a href="#infolettre"
+      <a href="infolettre.html"
          data-i18n="navNewsletter">Infolettre</a>
     </nav>
   </div>
@@ -921,80 +859,6 @@ a.brand-chip:hover{border-color:var(--red); color:var(--red); transform:translat
 </section>
 
 <!-- ============================ NEWSLETTER ============================ -->
-<section class="section" id="infolettre">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow" data-i18n="nlEyebrow">Infolettre</span>
-      <h2 data-i18n="nlTitle">Restez informé de nos promotions.</h2>
-      <p data-i18n="nlLede">Recevez nos catalogues, nos promotions saisonnières et les nouveautés en magasin. Réservée aux garages et aux commerces de la région.</p>
-    </div>
-
-    <div class="nl">
-      <div class="nl-form reveal">
-        <form id="nl-form" novalidate>
-          <div class="field">
-            <label for="nl-business"><span data-i18n="nlBusiness">Nom de l'entreprise</span><span class="req" aria-hidden="true">*</span></label>
-            <input id="nl-business" name="Entreprise" type="text" required autocomplete="organization"
-                   aria-describedby="err-business">
-            <p class="field-error" id="err-business" role="alert"></p>
-          </div>
-
-          <div class="field">
-            <label for="nl-contact"><span data-i18n="nlContact">Nom du contact</span><span class="req" aria-hidden="true">*</span></label>
-            <input id="nl-contact" name="Contact" type="text" required autocomplete="name"
-                   aria-describedby="err-contact">
-            <p class="field-error" id="err-contact" role="alert"></p>
-          </div>
-
-          <div class="field">
-            <label for="nl-phone"><span data-i18n="nlPhone">Numéro de téléphone</span><span class="req" aria-hidden="true">*</span></label>
-            <input id="nl-phone" name="Telephone" type="tel" required autocomplete="tel"
-                   placeholder="450 691-7255" aria-describedby="err-phone">
-            <p class="field-error" id="err-phone" role="alert"></p>
-          </div>
-
-          <div class="field">
-            <label for="nl-email"><span data-i18n="nlEmail">Courriel</span><span class="req" aria-hidden="true">*</span></label>
-            <input id="nl-email" name="Courriel" type="email" required autocomplete="email"
-                   placeholder="nom@entreprise.ca" aria-describedby="err-email">
-            <p class="field-error" id="err-email" role="alert"></p>
-          </div>
-
-          <div class="nl-trap" aria-hidden="true">
-            <label for="nl-website">Ne pas remplir</label>
-            <input id="nl-website" name="_honey" type="text" tabindex="-1" autocomplete="off">
-          </div>
-
-          <button class="btn btn-red btn-full" type="submit" id="nl-submit">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
-            <span data-i18n="nlSubmit">S'inscrire</span>
-          </button>
-
-          <p class="nl-note" data-i18n="nlNote">Les champs marqués d'un astérisque sont obligatoires. Vos coordonnées servent uniquement à vous envoyer nos communications et ne sont jamais revendues.</p>
-        </form>
-
-        <div class="nl-status" id="nl-status" role="status" aria-live="polite"></div>
-      </div>
-
-      <div class="nl-side reveal">
-        <ul class="nl-points">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-            <span><strong data-i18n="nlPt1T">Promotions avant tout le monde</strong><span data-i18n="nlPt1B">Les rabais fournisseurs et les programmes de commande saisonniers, dès leur sortie.</span></span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-            <span><strong data-i18n="nlPt2T">Nouveaux catalogues</strong><span data-i18n="nlPt2B">Un avis dès qu'un nouveau catalogue fournisseur est disponible.</span></span>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-            <span><strong data-i18n="nlPt3T">Pas de spam</strong><span data-i18n="nlPt3B">Quelques envois par année, et vous pouvez vous désabonner en tout temps.</span></span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ============================ CTA ============================ -->
 <section class="cta-band on-dark">
@@ -1279,24 +1143,6 @@ const T = {
     aboutPoint3:"Service en français et en anglais",
     aboutPoint4:"Trois points de service en Montérégie",
 
-    nlEyebrow:"Infolettre",
-    nlTitle:"Restez informé de nos promotions.",
-    nlLede:"Recevez nos catalogues, nos promotions saisonnières et les nouveautés en magasin. Réservée aux garages et aux commerces de la région.",
-    nlBusiness:"Nom de l'entreprise", nlContact:"Nom du contact",
-    nlPhone:"Numéro de téléphone",   nlEmail:"Courriel",
-    nlSubmit:"S'inscrire", nlSending:"Envoi en cours…",
-    nlNote:"Les champs marqués d'un astérisque sont obligatoires. Vos coordonnées servent uniquement à vous envoyer nos communications et ne sont jamais revendues.",
-    nlPt1T:"Promotions avant tout le monde",
-    nlPt1B:"Les rabais fournisseurs et les programmes de commande saisonniers, dès leur sortie.",
-    nlPt2T:"Nouveaux catalogues",
-    nlPt2B:"Un avis dès qu'un nouveau catalogue fournisseur est disponible.",
-    nlPt3T:"Pas de spam",
-    nlPt3B:"Quelques envois par année, et vous pouvez vous désabonner en tout temps.",
-    nlErrRequired:"Ce champ est obligatoire.",
-    nlErrEmail:"Entrez une adresse courriel valide.",
-    nlErrPhone:"Entrez un numéro de téléphone valide (10 chiffres).",
-    nlOk:"Merci ! Votre inscription a bien été envoyée. Nous vous écrirons à l'adresse fournie.",
-    nlFail:"L'envoi a échoué. Réessayez, ou écrivez-nous directement à info@bressani.co.",
 
     ctaTitle:"Vous cherchez une pièce ? Un appel suffit.",
     ctaBody:"Nos conseillers vérifient la disponibilité et réservent votre pièce au comptoir.",
@@ -1398,24 +1244,6 @@ const T = {
     aboutPoint3:"Service in French and English",
     aboutPoint4:"Three service points in the Montérégie",
 
-    nlEyebrow:"Newsletter",
-    nlTitle:"Stay on top of our promotions.",
-    nlLede:"Get our catalogues, seasonal promotions and new arrivals. Aimed at repair shops and businesses across the region.",
-    nlBusiness:"Business name", nlContact:"Contact name",
-    nlPhone:"Phone number",     nlEmail:"Email",
-    nlSubmit:"Sign up", nlSending:"Sending…",
-    nlNote:"Fields marked with an asterisk are required. Your details are used only to send you our communications and are never sold.",
-    nlPt1T:"Promotions before anyone else",
-    nlPt1B:"Supplier discounts and seasonal booking programs, as soon as they land.",
-    nlPt2T:"New catalogues",
-    nlPt2B:"A heads-up whenever a new supplier catalogue becomes available.",
-    nlPt3T:"No spam",
-    nlPt3B:"A handful of emails a year, and you can unsubscribe at any time.",
-    nlErrRequired:"This field is required.",
-    nlErrEmail:"Enter a valid email address.",
-    nlErrPhone:"Enter a valid phone number (10 digits).",
-    nlOk:"Thank you! Your sign-up has been sent. We'll be in touch at the address you provided.",
-    nlFail:"Sending failed. Please try again, or email us directly at info@bressani.co.",
 
     ctaTitle:"Looking for a part? One call is all it takes.",
     ctaBody:"Our counter staff will check availability and hold your part at the counter.",
@@ -1574,122 +1402,12 @@ function applyLang(next){
     ? "Pièces Auto Châteauguay — Pièces, outils et service depuis trois succursales"
     : "Pièces Auto Châteauguay — Parts, tools and service from three locations";
 
-  /* re-translate any error or status text that is currently on screen */
-  document.querySelectorAll('.field-error[data-key]').forEach(box => {
-    box.innerHTML = WARN_ICON + '<span>' + t[box.dataset.key] + '</span>';
-  });
-  const st = document.getElementById('nl-status');
-  if (st && st.dataset.key) st.textContent = t[st.dataset.key];
-
   renderDocs();
   renderBranches();
   try { localStorage.setItem('pac-lang', lang); } catch(e){}
 }
 
 /* ==================================================================
-   NEWSLETTER FORM
-   Posts to FormSubmit, which forwards each signup to the address below.
-   ⚠️ ONE-TIME SETUP: the first real submission triggers a confirmation
-   email to that address — click the link in it once and the form is live.
-   ================================================================== */
-const NL_ENDPOINT = 'https://formsubmit.co/ajax/info@bressani.co';
-
-const nlForm   = document.getElementById('nl-form');
-const nlStatus = document.getElementById('nl-status');
-const nlFields = [
-  {id:'nl-business', err:'err-business', check:v => v.trim() ? null : 'nlErrRequired'},
-  {id:'nl-contact',  err:'err-contact',  check:v => v.trim() ? null : 'nlErrRequired'},
-  {id:'nl-phone',    err:'err-phone',
-   check:v => !v.trim() ? 'nlErrRequired'
-            : (v.replace(/\D/g,'').length >= 10 ? null : 'nlErrPhone')},
-  {id:'nl-email',    err:'err-email',
-   check:v => !v.trim() ? 'nlErrRequired'
-            : (/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? null : 'nlErrEmail')}
-];
-
-const WARN_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg>';
-
-function nlValidate(f, silent){
-  const input = document.getElementById(f.id);
-  const box   = document.getElementById(f.err);
-  const key   = f.check(input.value);
-  if (key){
-    if (!silent){
-      box.innerHTML = WARN_ICON + '<span>' + T[lang][key] + '</span>';
-      box.classList.add('show');
-      input.setAttribute('aria-invalid','true');
-      box.dataset.key = key;
-    }
-    return false;
-  }
-  box.classList.remove('show');
-  box.removeAttribute('data-key');
-  input.removeAttribute('aria-invalid');
-  return true;
-}
-
-/* validate on blur, and clear the error as soon as they start fixing it */
-nlFields.forEach(f => {
-  const input = document.getElementById(f.id);
-  input.addEventListener('blur', () => nlValidate(f, false));
-  input.addEventListener('input', () => {
-    if (input.getAttribute('aria-invalid') === 'true') nlValidate(f, false);
-  });
-});
-
-function nlShow(kind, key){
-  nlStatus.className = 'nl-status show ' + kind;
-  nlStatus.textContent = T[lang][key];
-  nlStatus.dataset.key = key;
-}
-
-nlForm.addEventListener('submit', async e => {
-  e.preventDefault();
-
-  const bad = nlFields.filter(f => !nlValidate(f, false));
-  if (bad.length){
-    document.getElementById(bad[0].id).focus();   // WCAG: focus first invalid field
-    return;
-  }
-  if (document.getElementById('nl-website').value) return;   // bot filled the trap
-
-  const btn   = document.getElementById('nl-submit');
-  const label = btn.querySelector('span');
-  btn.disabled = true;
-  label.textContent = T[lang].nlSending;
-  nlStatus.className = 'nl-status';
-
-  const payload = {
-    Entreprise: document.getElementById('nl-business').value.trim(),
-    Contact:    document.getElementById('nl-contact').value.trim(),
-    Telephone:  document.getElementById('nl-phone').value.trim(),
-    Courriel:   document.getElementById('nl-email').value.trim(),
-    _subject:   'Nouvelle inscription à l\'infolettre — Pièces Auto Châteauguay',
-    _template:  'table',
-    _captcha:   'false'
-  };
-
-  try {
-    const res  = await fetch(NL_ENDPOINT, {
-      method:'POST',
-      headers:{'Content-Type':'application/json', 'Accept':'application/json'},
-      body:JSON.stringify(payload)
-    });
-    const data = await res.json().catch(() => ({}));
-    if (res.ok && String(data.success) !== 'false'){
-      nlForm.reset();
-      nlShow('ok','nlOk');
-    } else {
-      nlShow('err','nlFail');
-    }
-  } catch(err){
-    nlShow('err','nlFail');
-  } finally {
-    btn.disabled = false;
-    label.textContent = T[lang].nlSubmit;
-  }
-});
-
 /* Scroll reveal */
 let observer;
 function observeReveals(){
