@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Supplier catalogues are large PDFs; let them be crawled but they are not
+# the pages we want ranking for local searches.
+Sitemap: https://piecesautochateauguay.ca/sitemap.xml

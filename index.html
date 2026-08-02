@@ -13,10 +13,21 @@
 <script defer src="/_vercel/insights/script.js"></script>
 
 
-<title>Pièces Auto Châteauguay — Pièces, outils et service depuis trois succursales</title>
-<meta name="description" content="Pièces d'autos Châteauguay — pièces, outils et service pour garages et particuliers. Trois succursales : Châteauguay, Sainte-Martine et Saint-Rémi. Bannière Uni-Select.">
+<title>Pièces d'autos Châteauguay, Sainte-Martine et Saint-Rémi</title>
+<meta name="description" content="Pièces d'autos, outils et équipement pour garages et particuliers. Trois succursales en Montérégie : Châteauguay, Sainte-Martine et Saint-Rémi.">
 <meta name="theme-color" content="#0B0B0C">
 <link rel="icon" href="assets/logo.png" type="image/png">
+
+<link rel="canonical" href="https://piecesautochateauguay.ca/">
+<link rel="alternate" hreflang="fr-CA" href="https://piecesautochateauguay.ca/">
+<link rel="alternate" hreflang="x-default" href="https://piecesautochateauguay.ca/">
+<meta property="og:url" content="https://piecesautochateauguay.ca/">
+<meta property="og:site_name" content="Pièces Auto Châteauguay">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pièces Auto Châteauguay">
+<meta name="twitter:description" content="Pièces d'autos, outils et service pour garages et particuliers. Trois succursales : Châteauguay, Sainte-Martine et Saint-Rémi.">
+<meta name="twitter:image" content="https://piecesautochateauguay.ca/assets/logo.png">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Pièces Auto Châteauguay">
@@ -939,8 +950,38 @@ a.brand-chip:hover{border-color:var(--red); color:var(--red); transform:translat
   "@context":"https://schema.org",
   "@graph":[
     {
+      "@type":"Organization",
+      "@id":"https://piecesautochateauguay.ca/#organization",
+      "name":"Pièces d'autos Châteauguay inc.",
+      "alternateName":["Pièces Auto Châteauguay","Auto Parts Plus Châteauguay"],
+      "url":"https://piecesautochateauguay.ca/",
+      "logo":"https://piecesautochateauguay.ca/assets/logo.png",
+      "email":"info@piecesautochateauguay.ca",
+      "telephone":"+1-450-691-7255",
+      "areaServed":[
+        {"@type":"AdministrativeArea","name":"Montérégie"},
+        {"@type":"City","name":"Châteauguay"},
+        {"@type":"City","name":"Sainte-Martine"},
+        {"@type":"City","name":"Saint-Rémi"}
+      ],
+      "location":[
+        {"@id":"https://piecesautochateauguay.ca/#chateauguay"},
+        {"@id":"https://piecesautochateauguay.ca/#sainte-martine"},
+        {"@id":"https://piecesautochateauguay.ca/#saint-remi"}
+      ]
+    },
+    {
+      "@type":"WebSite",
+      "@id":"https://piecesautochateauguay.ca/#website",
+      "url":"https://piecesautochateauguay.ca/",
+      "name":"Pièces Auto Châteauguay",
+      "publisher":{"@id":"https://piecesautochateauguay.ca/#organization"},
+      "inLanguage":["fr-CA","en-CA"]
+    },
+    {
       "@type":"AutoPartsStore",
-      "@id":"#chateauguay",
+      "@id":"https://piecesautochateauguay.ca/#chateauguay",
+      "parentOrganization":{"@id":"https://piecesautochateauguay.ca/#organization"},
       "name":"Pièces d'autos Châteauguay — Châteauguay",
       "image":"assets/chateauguay.jpg",
       "telephone":"+1-450-691-7255",
@@ -952,7 +993,8 @@ a.brand-chip:hover{border-color:var(--red); color:var(--red); transform:translat
     },
     {
       "@type":"AutoPartsStore",
-      "@id":"#sainte-martine",
+      "@id":"https://piecesautochateauguay.ca/#sainte-martine",
+      "parentOrganization":{"@id":"https://piecesautochateauguay.ca/#organization"},
       "name":"Pièces d'autos Châteauguay — Sainte-Martine",
       "image":"assets/sainte-martine.jpg",
       "telephone":"+1-450-427-2368",
@@ -964,7 +1006,8 @@ a.brand-chip:hover{border-color:var(--red); color:var(--red); transform:translat
     },
     {
       "@type":"AutoPartsStore",
-      "@id":"#saint-remi",
+      "@id":"https://piecesautochateauguay.ca/#saint-remi",
+      "parentOrganization":{"@id":"https://piecesautochateauguay.ca/#organization"},
       "name":"Pièces d'autos Châteauguay — Saint-Rémi",
       "image":"assets/saint-remi.jpg",
       "telephone":"+1-450-454-3924",
@@ -1406,9 +1449,10 @@ function applyLang(next){
     btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang));
   });
 
+  /* keep these in step with the <title> tag in <head> — this line overwrites it */
   document.title = lang === 'fr'
-    ? "Pièces Auto Châteauguay — Pièces, outils et service depuis trois succursales"
-    : "Pièces Auto Châteauguay — Parts, tools and service from three locations";
+    ? "Pièces d'autos Châteauguay, Sainte-Martine et Saint-Rémi"
+    : "Auto Parts in Châteauguay, Sainte-Martine and Saint-Rémi";
 
   renderDocs();
   renderBranches();
