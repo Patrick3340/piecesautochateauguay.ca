@@ -378,7 +378,7 @@ th{font-weight:700; background:var(--surface)}
 
 <footer class="footer on-dark">
   <div class="container">
-    <p>© <span id="year">2026</span> Pièces d'autos Châteauguay inc. —
+    <p><span data-t="rights">Tous droits réservés.</span> © <span id="year">2026</span> Pièces d'autos Châteauguay inc. —
        <a href="politique-de-temoins.html" data-t="cookies">Politique de témoins</a> ·
        <a href="conditions.html" data-t="terms">Conditions</a></p>
   </div>
@@ -389,8 +389,8 @@ th{font-weight:700; background:var(--surface)}
    carries over here and vice-versa. */
 let lang = 'fr';
 const FOOT = {
-  fr:{cookies:'Politique de témoins', terms:'Conditions'},
-  en:{cookies:'Cookie policy',        terms:'Terms'}
+  fr:{rights:'Tous droits réservés.', cookies:'Politique de témoins', terms:'Conditions'},
+  en:{rights:'All rights reserved.',  cookies:'Cookie policy',        terms:'Terms'}
 };
 
 function applyLang(next){

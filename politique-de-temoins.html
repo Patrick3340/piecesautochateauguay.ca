@@ -326,7 +326,7 @@ td code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13.5p
 
 <footer class="footer on-dark">
   <div class="container">
-    <p>© <span id="year">2026</span> Pièces d'autos Châteauguay inc. —
+    <p><span data-t="rights">Tous droits réservés.</span> © <span id="year">2026</span> Pièces d'autos Châteauguay inc. —
        <a href="confidentialite.html" data-t="privacy">Politique de confidentialité</a> ·
        <a href="conditions.html" data-t="terms">Conditions</a></p>
   </div>
@@ -335,8 +335,8 @@ td code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13.5p
 <script>
 let lang = 'fr';
 const FOOT = {
-  fr:{privacy:'Politique de confidentialité', terms:'Conditions'},
-  en:{privacy:'Privacy policy',               terms:'Terms'}
+  fr:{rights:'Tous droits réservés.', privacy:'Politique de confidentialité', terms:'Conditions'},
+  en:{rights:'All rights reserved.',  privacy:'Privacy policy',               terms:'Terms'}
 };
 
 function applyLang(next){
